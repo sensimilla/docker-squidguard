@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# start apache to serve block.html file
+sudo /etc/init.d/apache2 start
+
 echo "running startSquidGuard with WPAT_IP=${WPAT_IP} WPAT_NOPROXY_NET=${WPAT_NOPROXY_NET} WPAT_NOPROXY_MASK=${WPAT_NOPROXY_MASK}"
 
 if [  "${WPAT_IP}" != "" ]; then
