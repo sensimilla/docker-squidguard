@@ -19,7 +19,7 @@ or build it
 ```docker build --tag="$USER/squidguard" .```
 
 run your build:
-```docker run --name='squidguard' -it --rm -p 3128:3128 "$USER/squidguard" ```
+```docker run --name='squidguard' -it --rm -p 3128:3128 -p 80:80 "$USER/squidguard" ```
 
 Please refer to [sameersbn/docker-squid](https://github.com/sameersbn/docker-squid) for details!
 
@@ -27,11 +27,11 @@ Please refer to [sameersbn/docker-squid](https://github.com/sameersbn/docker-squ
 
 Run the downloaded image
 
-```docker run --name='squidguard' -it --rm -p 3128:3128 muenchhausen/docker-squidguard:latest```
+```docker run --name='squidguard' -it --rm -p 3128:3128 -p 80:80 muenchhausen/docker-squidguard:latest```
 
 or as daemon
 
-```docker run -d --name='squidguard' -it -p 3128:3128 muenchhausen/docker-squidguard:latest```
+```docker run -d --name='squidguard' -it -p 3128:3128 -p 80:80 muenchhausen/docker-squidguard:latest```
 
 or run it including WPAT proxy autoconfig so your Operating system will find the settings automatically based on your DHCP settings:
 
